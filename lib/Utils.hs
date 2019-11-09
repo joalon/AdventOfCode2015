@@ -9,5 +9,5 @@ splitOn char string = splitOnImpl char string []
 splitOnImpl :: Char -> String -> [String] -> [String]
 splitOnImpl char [] acc = reverse acc
 splitOnImpl char string acc = do
-  let asd = takeWhile (/= char) string
-  splitOnImpl char (drop ((length asd) + 1) string) (asd : acc)
+  let splittedString = takeWhile (/= char) string
+  splitOnImpl char (drop ((length splittedString) + 1) string) (splittedString : acc)
