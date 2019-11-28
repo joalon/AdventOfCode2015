@@ -1,6 +1,7 @@
 module Day1 where
 
 import Utils (getInput)
+import Day1Lib (ElevatorDirection, parseToDirections)
 
 main :: IO ()
 main = do

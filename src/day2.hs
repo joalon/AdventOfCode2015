@@ -7,7 +7,7 @@ data Gift = Gift Int Int Int deriving (Show)
 
 createGift :: [Int] -> Gift
 createGift [a, b, c] = Gift a b c
-createGift anythingElse = error $ show anythingElse
+createGift anythingElse = error $ "Expected a three element list but got: " ++ show anythingElse
 
 getWrappingPaperNeeded:: Gift -> Int
 getWrappingPaperNeeded (Gift h w l) = 2 * l * w + 2 * w * h + 2 * h * l + getSmallestArea h w l
