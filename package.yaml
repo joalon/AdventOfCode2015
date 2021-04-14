@@ -71,3 +71,13 @@ tests:
     - -main-is Day1
     dependencies:
       - AdventOfCode2015
+  day2-test:
+    main:         day2.hs
+    source-dirs:  test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Day2
+    dependencies:
+      - AdventOfCode2015
