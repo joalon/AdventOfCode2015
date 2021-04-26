@@ -73,6 +73,17 @@ executables:
       - bytestring
       - utf8-string
 
+  day5:
+    main:         day5.hs
+    source-dirs:  src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Day5
+    dependencies:
+      - AdventOfCode2015
+
 tests:
   day1-test:
     main:         day1.hs
@@ -92,5 +103,15 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     - -main-is Day2
+    dependencies:
+      - AdventOfCode2015
+  day5-test:
+    main:         day5.hs
+    source-dirs:  test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Day5
     dependencies:
       - AdventOfCode2015
