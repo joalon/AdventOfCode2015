@@ -7,5 +7,5 @@ main :: IO ()
 main = hspec $ do
 
   describe "Day 3: everyOther should return every other element of a list" $ do
-    it "" $
-        (everyOther even [1,2,3,4,5,6]) `shouldBe` [2,4,6]
+    it "should take every other element out of a list" $
+        everyOther even [1,2,3,4,5,6] `shouldBe` [1,3,5]

@@ -33,7 +33,6 @@ main = do
 
   let santasVisitedLocations = map snd $ filter (\(ind, _) -> even ind) $ zip [0..] allVisitedLocations
   let robosantasVisitedLocations = map snd $ filter (\(ind, _) -> odd ind) $ zip [0..] allVisitedLocations
-  print $ tail santasVisitedLocations
   let result2 = locationsVisitedAtLeastOnce $ santasVisitedLocations ++ robosantasVisitedLocations
 
   putStrLn $ "Part 1 result is: " ++ show result1
