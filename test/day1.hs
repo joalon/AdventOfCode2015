@@ -7,7 +7,7 @@ main :: IO ()
 main = hspec $ do
 
   describe "Day 1: parsing from string to the data type works" $ do
-    it "Turns a string into a list of ElevatorDirections" $
+    it "Turns \"(())\" into the elevator directions Up, Up, Down, Down" $
       parseToDirections "(())" `shouldBe` [Just Up, Just Up, Just Down, Just Down]
 
 

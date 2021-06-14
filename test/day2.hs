@@ -7,5 +7,5 @@ main :: IO ()
 main = hspec $ do
 
   describe "Day 2: get the right amount of wrapping paper for a present" $ do
-    it "should return 58 for a gift with the dimensions 2, 3, 4" $
+    it "A gift with the dimensions 2, 3, 4 should require 58 units of wrapping paper" $
         (getWrappingPaperNeeded $ createGift [2,3,4]) `shouldBe` 58
