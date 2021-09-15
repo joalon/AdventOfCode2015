@@ -27,12 +27,13 @@ main :: IO ()
 main = do
   input <- getInput 3
   let directions = map parse . head $ lines input
-  let allVisitedLocations = visitedLocations directions
 
+  let allVisitedLocations = visitedLocations directions
   let result1 = locationsVisitedAtLeastOnce allVisitedLocations
 
-  let santasVisitedLocations = map snd $ filter (\(ind, _) -> even ind) $ zip [0..] allVisitedLocations
-  let robosantasVisitedLocations = map snd $ filter (\(ind, _) -> odd ind) $ zip [0..] allVisitedLocations
+  let santasVisitedLocations = visitedLocations $ map snd $ filter (\(ind, _) -> even ind) $ zip [0..] directions
+  let robosantasVisitedLocations = visitedLocations $ map snd $ filter (\(ind, _) -> odd ind) $ zip [0..] directions
+
   let result2 = locationsVisitedAtLeastOnce $ santasVisitedLocations ++ robosantasVisitedLocations
 
   putStrLn $ "Part 1 result is: " ++ show result1
